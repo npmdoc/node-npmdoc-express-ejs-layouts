@@ -61,12 +61,93 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.express-ejs-layouts">module express-ejs-layouts</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-ejs-layouts.express-ejs-layouts">
+            function <span class="apidocSignatureSpan"></span>express-ejs-layouts
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express-ejs-layouts" id="apidoc.module.express-ejs-layouts">module express-ejs-layouts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-ejs-layouts.express-ejs-layouts" id="apidoc.element.express-ejs-layouts.express-ejs-layouts">
+        function <span class="apidocSignatureSpan"></span>express-ejs-layouts
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">express-ejs-layouts = function (req, res, next) {
+  var render = res.render;
+
+  res.render = function (view, options, fn) {
+    var layout, self = this, app = req.app,
+      defaultLayout = app.get(&#x27;layout&#x27;);
+
+    options = options || {};
+    if (typeof options === &#x27;function&#x27;) {
+      fn = options;
+      options = {};
+    }
+
+    if (options.layout === false || ((options.layout || defaultLayout) === false)) {
+      render.call(res, view, options, fn);
+      return;
+    }
+
+    layout = options.layout || res.locals.layout || defaultLayout;
+    if (layout === true || layout === undefined) {
+      layout = &#x27;layout&#x27;;
+    }
+
+    options.contentFor = contentFor;
+    render.call(res, view, options, function (err, str) {
+      var l, locals;
+
+      if (err) { return fn ? fn(err) : next(err); }
+
+      locals = {
+        body: str,
+        defineContent: function(contentName) { return locals[contentName] || &#x27;&#x27;; }
+      };
+      for (l in options) {
+        if (options.hasOwnProperty(l) &#x26;&#x26; l !== &#x27;layout&#x27; &#x26;&#x26; l !== &#x27;contentFor&#x27;) {
+          locals[l] = options[l];
+        }
+      }
+
+      if (options.extractScripts === true || (options.extractScripts === undefined &#x26;&#x26; app.get(&#x27;layout extractScripts&#x27;) === true)) {
+        locals.script = &#x27;&#x27;;
+        parseScripts(locals);
+      }
+
+      if (options.extractStyles === true || (options.extractStyles === undefined &#x26;&#x26; app.get(&#x27;layout extractStyles&#x27;) === true)) {
+        locals.style = &#x27;&#x27;;
+        parseStyles(locals);
+      }
+
+      if (options.extractMetas === true || (options.extractMetas === undefined &#x26;&#x26; app.get(&#x27;layout extractMetas&#x27;) === true)) {
+        locals.meta = &#x27;&#x27;;
+        parseMetas(locals);
+      }
+
+      parseContents(locals);
+      render.call(self, layout, locals, fn);
+    });
+  };
+  next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

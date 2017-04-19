@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/Soarez/express-ejs-layouts#readme"
-
-    >express-ejs-layouts (v2.3.0)</a>
+    <a href="https://github.com/Soarez/express-ejs-layouts#readme">express-ejs-layouts (v2.3.0)</a>
 </h1>
 <h4>Layout support for ejs in express.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.express-ejs-layouts">module express-ejs-layouts</a><ol>
 
@@ -90,10 +83,10 @@
 
   res.render = function (view, options, fn) {
     var layout, self = this, app = req.app,
-      defaultLayout = app.get(&#x27;layout&#x27;);
+      defaultLayout = app.get('layout');
 
     options = options || {};
-    if (typeof options === &#x27;function&#x27;) {
+    if (typeof options === 'function') {
       fn = options;
       options = {};
     }
@@ -105,7 +98,7 @@
 
     layout = options.layout || res.locals.layout || defaultLayout;
     if (layout === true || layout === undefined) {
-      layout = &#x27;layout&#x27;;
+      layout = 'layout';
     }
 
     options.contentFor = contentFor;
@@ -116,26 +109,26 @@
 
       locals = {
         body: str,
-        defineContent: function(contentName) { return locals[contentName] || &#x27;&#x27;; }
+        defineContent: function(contentName) { return locals[contentName] || ''; }
       };
       for (l in options) {
-        if (options.hasOwnProperty(l) &#x26;&#x26; l !== &#x27;layout&#x27; &#x26;&#x26; l !== &#x27;contentFor&#x27;) {
+        if (options.hasOwnProperty(l) &amp;&amp; l !== 'layout' &amp;&amp; l !== 'contentFor') {
           locals[l] = options[l];
         }
       }
 
-      if (options.extractScripts === true || (options.extractScripts === undefined &#x26;&#x26; app.get(&#x27;layout extractScripts&#x27;) === true)) {
-        locals.script = &#x27;&#x27;;
+      if (options.extractScripts === true || (options.extractScripts === undefined &amp;&amp; app.get('layout extractScripts') === true)) {
+        locals.script = '';
         parseScripts(locals);
       }
 
-      if (options.extractStyles === true || (options.extractStyles === undefined &#x26;&#x26; app.get(&#x27;layout extractStyles&#x27;) === true)) {
-        locals.style = &#x27;&#x27;;
+      if (options.extractStyles === true || (options.extractStyles === undefined &amp;&amp; app.get('layout extractStyles') === true)) {
+        locals.style = '';
         parseStyles(locals);
       }
 
-      if (options.extractMetas === true || (options.extractMetas === undefined &#x26;&#x26; app.get(&#x27;layout extractMetas&#x27;) === true)) {
-        locals.meta = &#x27;&#x27;;
+      if (options.extractMetas === true || (options.extractMetas === undefined &amp;&amp; app.get('layout extractMetas') === true)) {
+        locals.meta = '';
         parseMetas(locals);
       }
 
@@ -157,3 +150,4 @@
     ]
 </div>
 </div>
+</body></html>
