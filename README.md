@@ -1,9 +1,14 @@
-# api documentation for  [express-ejs-layouts (v2.3.0)](https://github.com/Soarez/express-ejs-layouts#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-ejs-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-ejs-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-ejs-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-ejs-layouts)
+# npmdoc-express-ejs-layouts
+
+#### api documentation for  [express-ejs-layouts (v2.3.0)](https://github.com/Soarez/express-ejs-layouts#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-ejs-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-ejs-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-ejs-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-ejs-layouts)
+
 #### Layout support for ejs in express.
 
-[![NPM](https://nodei.co/npm/express-ejs-layouts.png?downloads=true)](https://www.npmjs.com/package/express-ejs-layouts)
+[![NPM](https://nodei.co/npm/express-ejs-layouts.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/express-ejs-layouts)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-express-ejs-layouts_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-express-ejs-layouts/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Igor Soarez",
-        "email": "igorsoarez@gmail.com"
+        "name": "Igor Soarez"
     },
     "bugs": {
         "url": "https://github.com/Soarez/express-ejs-layouts/issues"
@@ -47,17 +51,14 @@
     "main": "lib/express-layouts.js",
     "maintainers": [
         {
-            "name": "soarez",
-            "email": "igor@soarez.com"
+            "name": "soarez"
         },
         {
-            "name": "nemopersona",
-            "email": "nemo.persona@hush.com"
+            "name": "nemopersona"
         }
     ],
     "name": "express-ejs-layouts",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/Soarez/express-ejs-layouts.git"
@@ -68,16 +69,6 @@
     "version": "2.3.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module express-ejs-layouts](#apidoc.module.express-ejs-layouts)
-
-
-
-# <a name="apidoc.module.express-ejs-layouts"></a>[module express-ejs-layouts](#apidoc.module.express-ejs-layouts)
 
 
 
